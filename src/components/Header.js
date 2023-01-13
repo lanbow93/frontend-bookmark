@@ -1,3 +1,9 @@
 function Header(props){
-    return <h1>This is gonna be the header</h1>
+    return (
+            <div className="header">
+                <h1>Bookmarks</h1>
+            </div>
+        )
 }
+
+export default Header
