@@ -1,7 +1,7 @@
 import {Form, Link, useLoaderData} from 'react-router-dom'
 
 function Index(props){
-    const bookmarks=useLoaderData
+    const bookmarks=useLoaderData()
     return (
         <div>
             <h2>Add a new bookmark</h2>
