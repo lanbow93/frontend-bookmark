@@ -1,15 +1,12 @@
 import {Form} from 'react-router-dom'
 
-function Form(props){
+function UpdateForm(props){
     return(
-        <Form 
-            action="/:id/update"
-            method="post"
-        >
-            <input type="text" placeholder="bookmark" />
-            <input type="url" placeholder="http://" />
-            <input type="submit" value="Add" />
+        <Form action={`/${props.id}/update`} method="post">
+            <input type="input" name="title" defaultValue={props.title} />
+            <input type="input" name="url" defaultValue={props.url} />
+            <input type="submit" value="Update" />
         </Form>
     )
 }
-export default Form;
+export default UpdateForm;
