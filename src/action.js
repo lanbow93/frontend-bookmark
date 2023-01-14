@@ -19,3 +19,9 @@ export const createAction = async ({request}) => {
 
     return redirect("/")
 }
+export const deleteAction = async ({request, params}) => {
+    await fetch(`${URL}/bookmark/${params.id}`, {
+        method: "delete"
+    })
+    return redirect("/")
+}
