@@ -1,18 +1,19 @@
-import {Form, Link, useLoaderData} from 'react-router-dom'
+import { Link, useLoaderData} from 'react-router-dom'
+import NewForm from '../components/Form'
 
 function Index(props){
-    const bookmarks=useLoaderData
+    const bookmarks=useLoaderData()
     return (
         <div>
             <h2>Add a new bookmark</h2>
-            <Form />
+            <NewForm/>
             <h2>Bookmarks</h2>
                 {bookmarks.map((bookmark)=>(
                     <div>
-                        <Link to={bookmark.url}>
+                        <a href={bookmark.url} target="_blank">
                             <h1>{bookmark.title}</h1>
                         
-                        </Link>
+                        </a>
                     </div>
                 ))}    
         </div>

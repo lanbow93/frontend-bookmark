@@ -1,15 +1,12 @@
 import {Form} from 'react-router-dom'
 
-function Form(props){
+function NewForm(props){
     return(
-        <Form 
-            action="/"
-            method="post"
-        >
-            <input type="text" placeholder="bookmark" />
-            <input type="url" placeholder="http://" />
+        <Form action="/create" method="post">
+            <input type="input" name="title" placeholder="bookmark" />
+            <input type="input" name="url" placeholder="http://" />
             <input type="submit" value="Add" />
         </Form>
     )
 }
-export default Form
+export default NewForm;
