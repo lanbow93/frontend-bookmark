@@ -9,6 +9,7 @@ function Index(props){
             <NewForm/>
             <h2>Bookmarks</h2>
                 {bookmarks.map((bookmark)=>(
+
                     <div key={bookmark._id} className="bookmarkDiv">
                         <a href={bookmark.url} target="_blank">
                             <h1>{bookmark.title}</h1>
