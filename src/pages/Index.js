@@ -1,6 +1,6 @@
 import { Link, useLoaderData} from 'react-router-dom'
 import NewForm from '../components/Form'
-
+import Delete from '../components/Delete'
 function Index(props){
     const bookmarks=useLoaderData()
     return (
@@ -9,11 +9,12 @@ function Index(props){
             <NewForm/>
             <h2>Bookmarks</h2>
                 {bookmarks.map((bookmark)=>(
-                    <div className="bookmark-div">
+
+                    <div key={bookmark._id} className="bookmarkDiv">
                         <a href={bookmark.url} target="_blank">
                             <h1>{bookmark.title}</h1>
-                        
                         </a>
+                        <Delete id={bookmark._id} />
                     </div>
                 ))}    
         </div>

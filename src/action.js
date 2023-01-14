@@ -34,4 +34,11 @@ export const updateAction=async({req, params})=>{
         body:JSON.stringify(updatedBookmark)
     })
     return redirect('/')
+  
+  
+export const deleteAction = async ({request, params}) => {
+    await fetch(`${URL}/bookmark/${params.id}`, {
+        method: "delete"
+    })
+    return redirect("/")
 }
