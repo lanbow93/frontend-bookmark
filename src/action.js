@@ -34,6 +34,7 @@ export const updateAction=async({req, params})=>{
         body:JSON.stringify(updatedBookmark)
     })
     return redirect('/')
+}
   
   
 export const deleteAction = async ({request, params}) => {
