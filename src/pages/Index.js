@@ -9,7 +9,7 @@ function Index(props){
             <NewForm/>
             <h2>Bookmarks</h2>
                 {bookmarks.map((bookmark)=>(
-                    <div>
+                    <div className="bookmark-div">
                         <a href={bookmark.url} target="_blank">
                             <h1>{bookmark.title}</h1>
                         
