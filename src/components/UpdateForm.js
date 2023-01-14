@@ -1,9 +1,9 @@
-// import {Form} from 'react-router-dom'
+import {Form} from 'react-router-dom'
 
 function Form(props){
     return(
         <Form 
-            action="/"
+            action="/:id/update"
             method="post"
         >
             <input type="text" placeholder="bookmark" />
