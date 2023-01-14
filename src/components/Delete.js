@@ -1,6 +1,9 @@
-import {Form} 
+import { Form } from "react-router-dom"
+
 function Delete(props) {
-    return <h1>Delete Component</h1>
+    return <Form action={`/${props.id}/delete`} method="post">
+        <input type="submit" value="X" />
+    </Form>
 }
 
 export default Delete
