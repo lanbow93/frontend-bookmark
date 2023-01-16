@@ -1,10 +1,20 @@
-import {createBrowserRouter, createRoutesFromElements , Route} from "react-router-dom"
+import {createBrowserRouter, createRoutesFromElements , Route,} from "react-router-dom"
 import App from "./App"
+import { bookmarkdLoader } from "./loaders"
+import Index from "./pages/Index"
+import UpdateForm from "./components/UpdateForm"
+import { createAction, deleteAction, updateAction} from "./action"
+
 
 const router = createBrowserRouter(
+
     createRoutesFromElements (
         <Route path="/" element={<App/>}>
-            <Route path="" element={<h1>Router has been connected </h1>}/>
+            <Route path="" element={<Index/>} loader={bookmarkdLoader} />
+            <Route path="/create" action={createAction} />
+            <Route path="/:id/delete" action={deleteAction} />
+            <Route path="/:id/edit" element={<UpdateForm/>} />
+            <Route path="/:id/update" action={updateAction}/>
         </Route>
     )
 )
