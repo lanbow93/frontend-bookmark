@@ -6,11 +6,16 @@ function UpdateForm(props){
     const queries = new URLSearchParams(window.location.search)
     console.log(id.id)
     return(
-        <Form action={`/${id.id}/update`} method="post">
-            <input type="input" name="title" defaultValue={queries.get('title')} />
-            <input type="input" name="url" defaultValue={queries.get('url')} />
-            <input type="submit" value="Update" />
-        </Form>
+        <div className="wholePage">
+            <Form action={`/${id.id}/update`} method="post" className='formField'>
+                <h2>Update Bookmark: {queries.get('title')}</h2>
+                <label>Name: </label>
+                <input type="input" name="title" defaultValue={queries.get("title")} />
+                <label>URL: </label>
+                <input type="input" name="url" defaultValue={queries.get("url")} />
+                <input type="submit" value="Update Bookmark" />
+            </Form>
+        </div>
     )
 }
 export default UpdateForm;

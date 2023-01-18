@@ -10,22 +10,80 @@
 .bookmarkDiv input[type="submit"]{
   align-self: center;
   background-color: red;
+  background:linear-gradient(to bottom, #C0C0C0 5%, rgb(255, 0, 0) 100%);
+
   font-size: 1.5rem;
-  margin-top: 30px;
+  margin-top: 22px;
   margin-left: 10px;
+  margin-right: 10px;
   border-style: none;
   color: white;
+  border-radius: 100px;
+}
+
+.newForm {
+  display: grid;
+  justify-content: center;
 }
 
 .formField {
   display: grid;
   grid-template-columns: 5rem 15rem;
   justify-content: center;
+  border-style: solid;
+  margin-top: 1.5rem;
+  width: 25rem;
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: rgb(211, 210, 255);
+
 }
 
-.formField input[type="submit"]{
+.formField input[type="submit"], .formField h2{
   grid-column: span 2;
 }
-.formField input[type="input"] {
+.formField input[type="input"], .formField input[type="submit"]  {
   margin-bottom: 1rem;
+}
+
+.update {
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:linear-gradient(to bottom, #ffffff 5%, rgb(93, 93, 182) 100%);
+	border-radius:11px;
+  border-color: white;
+	display:inline-block;
+	color:#ffffff;
+	font-size:16px;
+	font-weight:bold;
+	padding:8px 18px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #cc9f52;
+  margin-top: 20px;
+}
+
+.bookmarkDiv a {
+  width: 12rem;
+}
+.bookmarkHolder {
+  border-style: solid;
+  width: 30rem;
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: rgb(211, 210, 255);
+}
+
+.wholePage {
+  display: grid;
+  justify-content: center;
+}
+
+.header a{
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px){
+	.bookmarkHolder {
+    width: 90%;
+    justify-self: center;
+  }
 }
