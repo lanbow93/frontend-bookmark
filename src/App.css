@@ -16,3 +16,16 @@
   border-style: none;
   color: white;
 }
+
+.formField {
+  display: grid;
+  grid-template-columns: 5rem 15rem;
+  justify-content: center;
+}
+
+.formField input[type="submit"]{
+  grid-column: span 2;
+}
+.formField input[type="input"] {
+  margin-bottom: 1rem;
+}
