@@ -20,8 +20,8 @@ export const createAction = async ({request}) => {
     return redirect("/")
 }
 
-export const updateAction=async({req, params})=>{
-    const formData=await req.formData()
+export const updateAction = async({request, params})=>{
+    const formData=await request.formData()
     const updatedBookmark={
         title:formData.get('title'),
         url:formData.get('url')
@@ -34,6 +34,7 @@ export const updateAction=async({req, params})=>{
         body:JSON.stringify(updatedBookmark)
     })
     return redirect('/')
+}
   
   
 export const deleteAction = async ({request, params}) => {
